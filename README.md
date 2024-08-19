@@ -12,7 +12,7 @@ Terceiro passo roda o comando abaixo, para criar a imagem:
 docker build --tag desafio-docker-go .
 
 Quarto passo executar o comando abaixo:
-docker run -p 8080:8080 desafio-docker-go
+docker run -p 8080:8080 --name desafio-docker-go desafio-docker-go
 
 Quinto passo abrir o Browser e digitar:
 http://localhost:8080
