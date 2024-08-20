@@ -17,6 +17,16 @@ Quarto passo executar o comando abaixo:<br>
 Quinto passo abrir o Browser e digitar:<br>
 **"http://localhost:8080"**
 
+Sexto passo baixar a image no dockerhub:<br>
+**"docker pull alexsoliveira/desafio-docker-go:latest"**
+
+Setimo passo executar o comando abaixo:<br>
+**"docker run -p 8081:8080 --name desafio-docker-go alexsoliveira/desafio-docker-go:latest"**
+
+Oitavo passo, abrir o Browser e digitar:<br>
+**"http://localhost:8081"**
+
+
 
 
 
