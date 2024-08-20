@@ -26,6 +26,9 @@ Setimo passo executar o comando abaixo:<br>
 Oitavo passo, abrir o Browser e digitar:<br>
 **"http://localhost:8081"**
 
+Link da image no DockerHub:<br>
+**"https://hub.docker.com/repository/docker/alexsoliveira/desafio-docker-go/general"**
+
 
 
 
