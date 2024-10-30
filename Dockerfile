@@ -1,20 +1,20 @@
-FROM golang:1.23 AS build
+FROM golang:1.7.6-alpine AS build
 
 WORKDIR /app
 
-COPY go.mod ./
-COPY *.go ./
+COPY go.mod .
+COPY *.go .
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o /desafio-docker-go
+RUN CGO_ENABLED=0 GOOS=linux go build -o desafio-docker-go .
 
-FROM gcr.io/distroless/base-debian10
+FROM scratch
 
 WORKDIR /
 
-COPY --from=build /desafio-docker-go /desafio-docker-go
+COPY --from=build /app/desafio-docker-go ./desafio-docker-go
 
 EXPOSE 8080
 
-USER nonroot:nonroot
+#USER nonroot:nonroot
 
-ENTRYPOINT [ "/desafio-docker-go" ]
+CMD [ "./desafio-docker-go" ]
